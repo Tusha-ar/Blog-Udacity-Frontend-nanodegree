@@ -1,0 +1,81 @@
+.starters{
+    align-items: stretch;
+    height: 50vh;
+    background-image: url('../images/football.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+nav{
+    margin-top: 3px;
+    height: 40px;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #d7fffd;
+}
+nav a{
+    border: 2px solid #706c61;
+    box-shadow:  5px 1px 10px 0px black;
+    text-decoration: none;
+    color: black;
+    font-family: 'Concert One', cursive;
+    font-size: 23px;
+    padding: 0 30px 0 30px;
+    transition-duration: 0.2s;
+}
+
+nav a:hover{
+    background-color: #bbe1fa;
+    color: #120136;
+}
+
+.container{
+
+    padding: 20px;
+    display: grid;
+    grid-template-rows: repeat(2, 200px);
+    grid-template-columns: 300px 500px;
+    grid-gap: 5px;
+    grid-template-areas: 
+    "dev main main"
+    "dev sr sr";
+}
+
+.dev{
+    grid-area: dev;
+    background-image: url(../images/me.jpg);
+    background-size: contain;
+    background-position: center;
+
+    background-repeat: no-repeat;
+}
+
+.content{
+    grid-area: main;
+    padding: 30px;
+    
+    font-family: 'Patrick Hand', cursive;
+}
+
+
+.sources{
+    grid-area: sr;
+    padding: 30px;
+}
+
+.main{
+    padding: 20px;
+    font-size: 20px;
+    width: 60%;
+    background-color: #dfddc7;
+    word-spacing: 6px;
+}
+
+.main a{
+    color: red;
+    text-decoration: none;
+}

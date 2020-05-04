@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+
+.starters{
+    align-items: stretch;
+    height: 50vh;
+    background-image: url('../images/football.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.container{
+    display: grid;
+    grid-gap: 2px;
+    grid-template-rows: 100px minmax(200px, auto) 100px;
+    grid-template-areas: 
+    "hd"
+    "main"
+    "ft ";
+}
+.heading{
+    grid-area: hd;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: 'Raleway', sans-serif;
+    word-spacing: 5px;
+    letter-spacing: 2px;
+    font-size: larger;
+    background-color: #f9f9f9;
+}
+.content{
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: auto;
+    grid-gap: 3px;
+
+}
+nav{
+    margin-top: 3px;
+    height: 40px;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #d7fffd;
+}
+nav a{
+    border: 2px solid #706c61;
+    box-shadow:  5px 1px 10px 0px black;
+    text-decoration: none;
+    color: black;
+    font-family: 'Concert One', cursive;
+    font-size: 25px;
+    padding: 0 30px 0 30px;
+    transition-duration: 0.2s;
+}
+
+nav a:hover{
+    background-color: #bbe1fa;
+    color: #120136;
+}
+
+.go-to-blog{
+    margin-top: 23px;
+    padding: 20px;
+    background-color: #f6f5f5;
+}
+
+.go-to-blog h3{
+    font-family: 'Concert One', cursive;
+    word-spacing: 3px;
+    letter-spacing: 3px;
+    font-weight: 500;
+    font-size: larger;
+}
+
+.go-to-blog ul{
+    display: grid;
+    grid-gap: 7px;
+}
+
+.go-to-blog ul a{
+    text-decoration: none;
+    color: black;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 20px;
+    word-spacing: 4px;
+
+}
+
+.go-to-blog ul a:hover{
+    text-decoration: underline;
+}
+
+.blog-area{
+    padding: 30px;
+    display: grid;
+    grid-gap: 25px;
+}
+.blog{
+    background-color: #dee3e2;
+    padding: 20px 4px 20px 4px;
+    border-radius: 10px;
+}
+
+.blog-title{
+    font-family: 'Open Sans Condensed', sans-serif;
+    letter-spacing: 3px;
+    font-weight: 300;
+    word-spacing: 5px;
+    font-size: 25px;
+    text-align: center;
+    background-color: #f4f9f4;
+}
+
+.blog-content{
+    padding: 30px;
+    margin: 0 15% 0 15%;
+    text-align: center;
+    font-family: 'Montserrat Alternates', sans-serif;
+    word-spacing: 5px;
+    line-height: 25px;
+    letter-spacing: 2px;
+}
+
+.blog-content a{
+    text-decoration: none;
+    color: #ee6f57;
+    font-family: 'PT Serif', serif;
+    font-size: 20px;
+}
+
+.footer{
+    grid-area: ft;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: 'Raleway', sans-serif;
+    word-spacing: 5px;
+    letter-spacing: 2px;
+    font-size: larger;
+    font-size: 25px;
+    background-color: #f0f0f0;
+}
