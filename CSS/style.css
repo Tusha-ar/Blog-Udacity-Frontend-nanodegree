@@ -1,13 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Raleway&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital@1&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Montserrat+Alternates&family=Open+Sans+Condensed:wght@300&family=Patrick+Hand&display=swap');
 
 .starters{
     align-items: stretch;
     height: 50vh;
-    background-image: url('../images/football.jpg');
+    background-image: url('../assets/images/football.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -44,7 +40,6 @@
 nav{
     margin-top: 3px;
     height: 40px;
-    
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -120,7 +115,42 @@ nav a:hover{
     background-color: #f4f9f4;
 }
 
+.blog-user-content{
+    padding: 30px;
+    display: grid;
+    grid-auto-rows: 200px auto 30px;
+    grid-gap: 20px;
+    grid-template-areas: 
+    "img"
+    "main"
+    "bt";
+}
+
+
+#blog-one{
+    background-image: url(../assets/images/mvr.jpg);
+}
+
+
+#blog-two{
+    background-image: url(../assets/images/david.jpg);
+}
+
+
+#blog-three{
+    background-image: url(../assets/images/david\ de\ gea.jpg);
+}
+
+.blog-image{
+    grid-area: img;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
 .blog-content{
+    grid-area: main;
     padding: 30px;
     margin: 0 15% 0 15%;
     text-align: center;
@@ -129,6 +159,23 @@ nav a:hover{
     line-height: 25px;
     letter-spacing: 2px;
 }
+
+.button{
+    outline: none;
+    background-color: #c72c41;
+    grid-area: bt;
+    justify-items: center;
+    border: none;
+    color: #eeeeee;
+    font-size: 15px;
+    padding: 20px 10px 20px 10px;
+    margin: 0 40% 0 40%;
+}
+
+.button:hover{
+    background-color: #801336;
+}
+
 
 .blog-content a{
     text-decoration: none;
@@ -149,4 +196,63 @@ nav a:hover{
     font-size: larger;
     font-size: 25px;
     background-color: #f0f0f0;
+}
+
+
+@media(max-width: 901px){
+    .starters{
+        border: 2px solid black;
+        width: 193vw;
+        align-items: stretch;
+        background-image: url('../assets/images/football.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    nav{
+        width: 195vw;
+        margin-top: 3px;
+        height: 40px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: #d7fffd;
+    }
+    .container{
+        display: grid;
+        grid-gap: 2px;
+        grid-template-columns: 195vw;
+        grid-template-rows: 100px minmax(200px, auto) 100px;
+        grid-template-areas: 
+        "hd"
+        "main"
+        "ft ";
+    }
+
+    .content{
+        grid-area: main;
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        grid-template-rows: auto;
+        grid-gap: 3px;
+    
+    }
+
+    .blog-content{
+        grid-area: main;
+        padding: 20px 0 20px 0;
+        margin: 0 15% 0 15%;
+        text-align: center;
+        font-family: 'Montserrat Alternates', sans-serif;
+        word-spacing: 5px;
+        line-height: 25px;
+        letter-spacing: 2px;
+    }
+    .go-to-blog{
+        margin-top: 23px;
+        padding: 10px;
+        background-color: #f6f5f5;
+    }
 }
