@@ -199,7 +199,7 @@ nav a:hover{
 }
 
 
-@media(max-width: 901px){
+@media(max-width: 1024px){
     .starters{
         border: 2px solid black;
         width: 193vw;
